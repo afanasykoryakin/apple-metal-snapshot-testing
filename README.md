@@ -18,10 +18,7 @@ class ExampleTests: XCTestCase {
 
     func testViewSomeSize() {
         let view = View()
-        assertSnapshot(
-	        view,
-            on: (size: CGSize(width: 100, height: 300), scale: 3)
-        )
+        assertSnapshot(view, on: (size: CGSize(width: 100, height: 300), scale: 3))
     }
 }
 ```
@@ -31,11 +28,7 @@ By default, a naive comparison method . If you want to use a different compariso
 ```swift
 func testViewIphone14() {
     let view = View()
-	assertSnapshot(
-	    view, 
-        on: .iPhone14, 
-        as: .cluster(threshold: 3, clusterSize: 3)
-    )
+	assertSnapshot(view, on: .iPhone14, as: .cluster(threshold: 3, clusterSize: 3))
 }
 ```
 ## Installation
